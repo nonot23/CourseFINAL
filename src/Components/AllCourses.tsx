@@ -117,7 +117,7 @@ const AllCourses: React.FC = () => {
                 onClick={handleClearFilter}
                 className="btn btn-md bg-gray-300 hover:bg-gray-400 text-black mt-2 md:mt-0  "
               >
-                ล้างการค้นหา
+                Clear
               </button>
               </div>
             </div>
