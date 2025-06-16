@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useContext, useState,useEffect } from "react";
 import { CourseContext } from "../Components/Context/FetchCourse";
 

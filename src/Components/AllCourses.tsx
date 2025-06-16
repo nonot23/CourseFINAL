@@ -1,14 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useContext, useEffect } from "react";
 import { CourseContext } from "./Context/FetchCourse";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import LoginRequiredModal from "./Modal/LoginRequiredModal";
 import { useAuth } from "./Context/AuthCourse";
 import { useNavigate } from "react-router-dom";
 
 type Category = string;
 
-const AllCourses = () => {
+const AllCourses: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
   const {
@@ -98,7 +99,7 @@ const AllCourses = () => {
             {selected === "คอร์สทั้งหมด" ? "คอร์สทั้งหมด" : `${selected}`}
           </h1>
           <div className="w-full md:w-64">
-            <div className="flex justify-between items-center ">
+            <div className="md:flex justify-between items-center ">
               <select
                 className="select w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
                 value={selected}
@@ -114,7 +115,7 @@ const AllCourses = () => {
               <div className="flex mx-1">
               <button
                 onClick={handleClearFilter}
-                className="btn btn-md bg-gray-300 hover:bg-gray-400 text-black  "
+                className="btn btn-md bg-gray-300 hover:bg-gray-400 text-black mt-2 md:mt-0  "
               >
                 ล้างการค้นหา
               </button>
@@ -122,11 +123,11 @@ const AllCourses = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 md:gap-10 xl:gap-10  transition-all duration-800 ease-out mt-8">
+          <div className="grid grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 gap-2 md:gap-10 lg:gap-2 xl:gap-10  transition-all duration-800 ease-out mt-8">
             {visibleCourses.map((course) => (
               <div
                 key={course.id}
-                className="card xl:w-[350px] bg-base-200 shadow-xl p-1"
+                className="card  bg-base-200 shadow-xl p-1"
               >
                 <figure>
                   <img

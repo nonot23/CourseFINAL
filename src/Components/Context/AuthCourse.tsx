@@ -1,3 +1,4 @@
+import {useContext} from 'react';
 import { createContext, useState, useEffect } from 'react'
 
 interface AuthContextType {
@@ -97,5 +98,5 @@ export const AuthCourse: React.FC<{ children: React.ReactNode }> = ({ children }
     </AuthContext.Provider>
   );
 }
-export const useAuth = () => React.useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext);
 
