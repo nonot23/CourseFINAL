@@ -52,18 +52,15 @@ const CourseDetail = () => {
   }, [currentVideoIndex, lecture]); // ตรวจสอบเมื่อ currentVideoIndex หรือ lecture เปลี่ยน
 
   // Function สำหรับจัดการการคลิกวิดีโอ
-  const handleVideoClick = (index: number) => {
-    // ทำเครื่องหมายวิดีโอที่กำลังดูอยู่ว่าจบ ก่อนที่จะเปลี่ยนไปวิดีโอใหม่
-    setCompletedVideoIndices((prev) => {
-      const newSet = new Set(prev);
-      if (currentVideoIndex >= 0 && lecture?.videos[currentVideoIndex]) {
-        newSet.add(currentVideoIndex);
-      }
-      return newSet;
-    });
-    // เปลี่ยนไปเล่นวิดีโอใหม่
-    setCurrentVideoIndex(index);
-  };
+const handleVideoClick = (index: number) => {
+  setCompletedVideoIndices((prev) => {
+    const newSet = new Set(prev);
+    newSet.add(index); // ✅ ทำเครื่องหมายว่าดูจบทันทีที่คลิก
+    return newSet;
+  });
+
+  setCurrentVideoIndex(index);
+};
 
   if (!course) return <div className="text-center mt-10">Course not found</div>;
 
