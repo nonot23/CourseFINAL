@@ -76,7 +76,7 @@ const handleVideoClick = (index: number) => {
       <div className="flex flex-col  xl:flex-row justify-between space-y-10 xl:space-y-0 xl:space-x-10">
       <div className="w-full max-w-3xl bg-gray-200 p-6 rounded-lg shadow-lg space-y-5">
         <iframe
-          src={`${currentVideo?.video}?modestbranding=1&rel=0&enablejsapi=1`}
+          src={currentVideo?.video}
           className="w-full md:h-[300px] lg:h-96"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
