@@ -18,29 +18,35 @@ const CourseDetail = () => {
     return saved ? new Set(JSON.parse(saved)) : new Set();
   });
 
-   useEffect(() => {
-    localStorage.setItem(`completed-video-id-${id}`, JSON.stringify(Array.from(completedVideoIndices)));
-  }, [completedVideoIndices, id]);
+useEffect(() => {
+  if (!id) return;
+  const saved = localStorage.getItem(`completed-video-id-${id}`);
+  if (saved) {
+    setCompletedVideoIndices(new Set(JSON.parse(saved)));
+  }
+}, [id, courses]);
+
+useEffect(() => {
+  localStorage.setItem(`completed-video-id-${id}`, JSON.stringify(Array.from(completedVideoIndices)));
+}, [completedVideoIndices, id]);
 
 
-  useEffect(() => {
-    return () => {
-
-      setCompletedVideoIndices((prev) => {
-        const newSet = new Set(prev);
-        if (currentVideoIndex >= 0 && lecture?.videos[currentVideoIndex]) {
-          newSet.add(currentVideoIndex);
-        }
-        return newSet;
-      });
-    };
-  }, [currentVideoIndex, lecture]); // ตรวจสอบเมื่อ currentVideoIndex หรือ lecture เปลี่ยน
+useEffect(() => {
+  if (currentVideoIndex >= 0 && lecture?.videos[currentVideoIndex]) {
+    setCompletedVideoIndices((prev: Set<number>) => {
+      if (prev.has(currentVideoIndex)) return prev;
+      const newSet = new Set(prev);
+      newSet.add(currentVideoIndex);
+      return newSet;
+    });
+  }
+}, [currentVideoIndex, lecture]);
 
   // Function สำหรับจัดการการคลิกวิดีโอ
 const handleVideoClick = (index: number) => {
   setCompletedVideoIndices((prev) => {
     const newSet = new Set(prev);
-    newSet.add(index); // ✅ ทำเครื่องหมายว่าดูจบทันทีที่คลิก
+    newSet.add(index); //  ทำเครื่องหมายว่าดูจบทันทีที่คลิก
     return newSet;
   });
 
