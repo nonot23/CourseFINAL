@@ -22,25 +22,10 @@ const CourseDetail = () => {
     localStorage.setItem(`completed-video-id-${id}`, JSON.stringify(Array.from(completedVideoIndices)));
   }, [completedVideoIndices, id]);
 
-  useEffect(() => {
-    
-    if (currentVideoIndex !== 0 || (currentVideoIndex === 0 && completedVideoIndices.size > 0)) {
-      setCompletedVideoIndices((prev) => {
-        const newSet = new Set(prev);
-       
-        if (currentVideoIndex > 0) { // กรณีที่เปลี่ยนไปวิดีโออื่นที่ไม่ใช่วิดีโอแรก
-          newSet.add(currentVideoIndex - 1);
-        }
-        
-        return newSet;
-      });
-    }
-  }, [currentVideoIndex, completedVideoIndices.size]); // ตรวจสอบเมื่อ currentVideoIndex หรือขนาดของ Set เปลี่ยน
 
   useEffect(() => {
     return () => {
-      // เมื่อ component unmount (เช่น ผู้ใช้ออกจากหน้า CourseDetail)
-      // ให้ทำเครื่องหมายวิดีโอที่กำลังดูอยู่ว่าจบ
+
       setCompletedVideoIndices((prev) => {
         const newSet = new Set(prev);
         if (currentVideoIndex >= 0 && lecture?.videos[currentVideoIndex]) {
