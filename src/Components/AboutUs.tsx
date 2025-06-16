@@ -3,7 +3,7 @@
 const AboutUs = () => {
    return (
     <section className="bg-white dark:bg-gray-800 dark:text-white text-gray-800 ">
-      <div className='py-12 max-w-5xl mx-auto'>
+      <div className='container p-8 py-12 max-w-5xl mx-auto'>
       <h2 className="text-3xl font-bold text-center mb-6 text-[var(--color-primary)] dark:text-white">เกี่ยวกับเรา</h2>
       <p className="text-lg text-center mb-8">
         เราเชื่อว่าทุกคนสามารถเรียนรู้ได้ ไม่ว่าจะอยู่ที่ไหน เวลาใดก็ตาม
