@@ -45,7 +45,7 @@ const Hero_Section = () => {
             </h2>
             <div>
               <button className="btn btn-primary font-roboto xl:text-[17px]  xl:h-11 hover:cursor-pointer hover:bg-cyan-900">
-                <Link to="/courses" className="text-white">
+                <Link to="/Course" className="text-white">
                   เริ่มเรียนเลย
                 </Link>
               </button>
