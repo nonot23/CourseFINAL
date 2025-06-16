@@ -1,4 +1,3 @@
-import React from "react";
 import html from "../assets/images/icons8-html-96.png";
 import css from "../assets/images/icons8-css-96.png";
 import js from "../assets/images/icons8-javascript-96.png";

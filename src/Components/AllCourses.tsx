@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import { CourseContext } from "./Context/FetchCourse";
 import axios from "axios";
 import { Link } from "react-router-dom";

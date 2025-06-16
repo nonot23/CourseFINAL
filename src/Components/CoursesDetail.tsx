@@ -1,7 +1,6 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { CourseContext } from "./Context/FetchCourse";
-import { div } from "framer-motion/client";
 
 const CourseDetail = () => {
   const { id } = useParams();

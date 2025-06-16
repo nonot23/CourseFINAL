@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { SiCoursera } from "react-icons/si";
 import { Link } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";

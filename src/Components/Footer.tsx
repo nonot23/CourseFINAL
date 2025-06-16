@@ -1,4 +1,4 @@
-import React from "react";
+
 import { SiCoursera } from "react-icons/si";
 import { Link } from "react-router-dom";
 import { FaFacebookSquare } from "react-icons/fa";
