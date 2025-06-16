@@ -2,6 +2,7 @@ import { useState} from "react";
 import hero from "../assets/images/hero.webp";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-router-dom";
 
 
 const Hero_Section = () => {
@@ -44,7 +45,9 @@ const Hero_Section = () => {
             </h2>
             <div>
               <button className="btn btn-primary font-roboto xl:text-[17px]  xl:h-11 hover:cursor-pointer hover:bg-cyan-900">
-                Get Started
+                <Link to="/courses" className="text-white">
+                  เริ่มเรียนเลย
+                </Link>
               </button>
             </div>
           </motion.div>
