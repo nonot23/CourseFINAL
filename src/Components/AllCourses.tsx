@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 type Category = string;
 
-const AllCourses: React.FC = () => {
+const AllCourses = () => {
   const [showModal, setShowModal] = useState(false);
   const [categories, setCategories] = useState<Category[]>([]);
   const {
@@ -117,7 +117,7 @@ const AllCourses: React.FC = () => {
                 onClick={handleClearFilter}
                 className="btn btn-md bg-gray-300 hover:bg-gray-400 text-black mt-2 md:mt-0  "
               >
-                Clear
+                ล้างตัวกรอง
               </button>
               </div>
             </div>
