@@ -106,9 +106,9 @@ const MainCourse = () => {
           </div>
           
           <div>
-          <div className="inline-grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-4 gap-2 md:gap-10 lg:gap-40 xl:gap-x-76  2xl:gap-8  transition-all duration-800 ease-out ">
+          <div className="inline-grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-4 gap-2 md:gap-10 lg:gap-10 xl:gap-x-76  2xl:gap-8  transition-all duration-800 ease-out ">
             {visibleCourses.map((course) => (
-              <div key={course.id} className="card  md:min-w-[210px] lg:min-w-[250px] xl:min-w-[300px] 2xl:min-w-[350px] p-1 bg-base-200 shadow-md ">
+              <div key={course.id} className="card  md:min-w-[210px] lg:min-w-[280px] xl:min-w-[300px] 2xl:min-w-[350px] p-1 bg-base-200 shadow-md ">
                 <figure>
                   <img
                     src={course.image}

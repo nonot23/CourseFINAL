@@ -187,9 +187,9 @@ const Navbar = () => {
             </ul>
             <div className="w-full border-t border-gray-300 my-5 block xl:hidden "></div>
             <div className="flex flex-col xl:flex-row my-8 xl:my-0 ml-auto">
-              <div className="flex flex-col xl:flex-row gap-4">
+              <div className="flex flex-col xl:flex-row gap-4 ">
                 {isAuthenticated ? (
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center  gap-4 mx-auto xl:ml-0">
                     <span className="text-sm text-gray-700 whitespace-nowrap">
                       👤 {user}
                     </span>
