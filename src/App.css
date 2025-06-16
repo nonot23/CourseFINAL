@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@plugin "daisyui";
+@font-face {
+    font-family: 'Roboto';
+    src: url('/src/assets/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Kanit';
+    src: url('/src/assets/fonts/Kanit-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap; /* ป้องกันการแสดงผลฟอนต์ผิดพลาดขณะโหลด */
+    
+}
+
+
+@layer base {
+  :root {
+    --color-primary: #043A53;
+    --color-tab:#075477;
+    --color-secondary: #c4c4c4d0;
+    --color-yellow: #ffc000;
+    --color-hover: #0b6691;
+  }
+  .font-roboto {
+    font-family: 'Roboto', sans-serif !important;
+  }
+  .font-kanit {
+    font-family: 'Kanit', sans-serif !important;
+  }
+}
+
+
