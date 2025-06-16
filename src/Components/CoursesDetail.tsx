@@ -1,11 +1,11 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect,useRef } from "react";
 import { useParams } from "react-router-dom";
 import { CourseContext } from "./Context/FetchCourse";
 
 const CourseDetail = () => {
   const { id } = useParams();
   const { courses = [],  isLoading, error } = useContext(CourseContext);
-  
+  const timeoutRef = useRef<number | null>(null);
   const course = courses?.find((course) => course.id === Number(id));
   const lecture = course?.lectures[0];
 
@@ -31,16 +31,23 @@ useEffect(() => {
 }, [completedVideoIndices, id]);
 
 
-useEffect(() => {
-  if (currentVideoIndex >= 0 && lecture?.videos[currentVideoIndex]) {
-    setCompletedVideoIndices((prev: Set<number>) => {
-      if (prev.has(currentVideoIndex)) return prev;
-      const newSet = new Set(prev);
-      newSet.add(currentVideoIndex);
-      return newSet;
-    });
-  }
-}, [currentVideoIndex, lecture]);
+  useEffect(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = window.setTimeout(() => {
+      setCompletedVideoIndices((prev) => {
+        if (prev.has(currentVideoIndex)) return prev;
+        const newSet = new Set(prev);
+        newSet.add(currentVideoIndex);
+        return newSet;
+      });
+    }, 1500); // ดีเลย์ 1.5 วินาที
+
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [currentVideoIndex]);
 
   // Function สำหรับจัดการการคลิกวิดีโอ
 const handleVideoClick = (index: number) => {
