@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { useState, useContext, useEffect } from "react";
 import { CourseContext } from "./Context/FetchCourse";
 import axios from "axios";
@@ -21,7 +21,7 @@ const AllCourses = () => {
   const [selected, setSelected] = useState("คอร์สทั้งหมด");
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
-  const [targetLink, setTargetLink] = useState<string | null>(null);
+
   const slugify = (text: string) =>
     text
       .toLowerCase()
@@ -33,15 +33,15 @@ const AllCourses = () => {
     const link = `/course/${courseId}/${slugify(courseName)}`;
     if (isAuthenticated) {
       navigate(link);
+      
     } else {
-      setTargetLink(link);
+
       setShowModal(true);
     }
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
-    setTargetLink(null);
   };
 
   const handleClearFilter = () => {

@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { useContext, useState,useEffect } from "react";
 import { CourseContext } from "../Components/Context/FetchCourse";
 
@@ -15,7 +15,7 @@ const MainCourse = () => {
   
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
-  const [targetLink, setTargetLink] = useState<string | null>(null);
+
 
   useEffect(() => {
   const updateItemsPerPage = () => {
@@ -82,14 +82,13 @@ const MainCourse = () => {
     if (isAuthenticated) {
       navigate(link);
     } else {
-      setTargetLink(link);
       setShowModal(true);
     }
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
-    setTargetLink(null);
+
   };
   return (
     <main className=" dark:bg-gray-800 py-8 font-kanit">

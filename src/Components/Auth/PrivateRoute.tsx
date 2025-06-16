@@ -18,6 +18,7 @@ export default function PrivateRoute({ children }: { children: React.ReactElemen
     return (
       <LoginRequiredModal
         onClose={() => setShowModal(false)} // ปิด modal อย่างเดียว ไม่ต้อง redirect
+        
       />
     );
   }
