@@ -119,7 +119,7 @@ const Navbar = () => {
           >
             <div className="mx-auto">
               <label
-                className={`input w-full  xl:min-w-[350px] 2xl:w-auto   my-5 xl:my-0   `}
+                className={`input w-full xl:w-[300px] 2xl:min-w-[350px] 2xl:w-auto   my-5 xl:my-0   `}
               >
                 <svg
                   className="h-[1em] opacity-50"
@@ -189,7 +189,7 @@ const Navbar = () => {
             <div className="flex flex-col xl:flex-row my-8 xl:my-0 ml-auto">
               <div className="flex flex-col xl:flex-row gap-4 ">
                 {isAuthenticated ? (
-                  <div className="flex items-center gap-5 mx-auto md:ml-0">
+                  <div className="flex items-center  gap-5 mx-auto md:mx-0 ">
                     <span className="text-sm text-gray-700 whitespace-nowrap">
                       👤 {user}
                     </span>
