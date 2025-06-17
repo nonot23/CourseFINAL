@@ -189,7 +189,7 @@ const Navbar = () => {
             <div className="flex flex-col xl:flex-row my-8 xl:my-0 ml-auto">
               <div className="flex flex-col xl:flex-row gap-4 ">
                 {isAuthenticated ? (
-                  <div className="flex items-center  gap-5 mx-auto md:mx-0 ">
+                  <div className="flex items-center  gap-5 mx-auto xl:mx-0 ">
                     <span className="text-sm text-gray-700 whitespace-nowrap">
                       👤 {user}
                     </span>
