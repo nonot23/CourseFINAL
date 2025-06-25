@@ -8,5 +8,7 @@ Lib อื่นๆ : **React Hook Form** , **useSWR** ,**zod**  , **axios**  , 
 - มีการเช็คว่าเคยเข้าดูคอร์สเรียนนี้แล้ว
 - ธีมเว็บ
 - Responsive
-deploy หน้าบ้านขึ้น vercel  : Link หน้าเว็บ https://course-final.vercel.app
-deploy mockapi flask ขึ้น render 
+  
+ deploy หน้าบ้านขึ้น vercel  : Link หน้าเว็บ https://course-final.vercel.app
+
+ deploy mockapi flask ขึ้น render 
