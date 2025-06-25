@@ -1,4 +1,4 @@
-# React + TypeScript + Vite + TailWindCss โปรเจคเว็บคอร์สเรียนออนไลน์
+# React + TypeScript + Vite + Tailwind CSS โปรเจคเว็บคอร์สเรียนออนไลน์
 
 Lib อื่นๆ : **React Hook Form** , **useSWR** ,**zod**  , **axios**  , **framer-motion**
 
