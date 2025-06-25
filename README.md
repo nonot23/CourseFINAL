@@ -1,5 +1,12 @@
-# React + TypeScript + Vite + TailWindCss โปรเจคหน้าบ้านคอรฺ์สเรียนออนไลน์
-Lib อื่นๆ : React Hook Form , useSWR , zod , axios , framer-motion
-ระบบในเว็บ                                                                                                                                                                                                                                                                        1. สมัครสมาชิก และ login เก็บข้อมูลใน LocalStorage มีการ Auth ต้อง login ก่อนถึงจะดูวิดีโอคอร์สเรียนได้                                                                                                                                                                                        2. ค้นหาคอร์ส หมวดหมู่คอร์ส                                                                                                                                                                                                                                                         3. มีการเช็คว่าเคยเข้าดูคอร์สเรียนนี้แล้ว                                                                                                                                                                                                                                                  4. ธีมเว็บ                                                                                                                                                                                                                                                                          5. Responsive                                                                                                                                     
-*deploy หน้าบ้านขึ้น vercel  : Link หน้าเว็บ https://course-final.vercel.app                                                                                                                                                                                                         *deploy mockapi flask ขึ้น render   
+# React + TypeScript + Vite + TailWindCss โปรเจคเว็บคอร์สเรียนออนไลน์
 
+Lib อื่นๆ : **React Hook Form** , **useSWR** ,**zod**  , **axios**  , **framer-motion**
+
+ระบบทั้งหมด
+- สมัครสมาชิก และ login เก็บข้อมูลใน LocalStorage มีการ Auth ต้อง login ก่อนถึงจะดูวิดีโอคอร์สเรียนได้  
+- ค้นหาคอร์ส หมวดหมู่คอร์ส
+- มีการเช็คว่าเคยเข้าดูคอร์สเรียนนี้แล้ว
+- ธีมเว็บ
+- Responsive
+deploy หน้าบ้านขึ้น vercel  : Link หน้าเว็บ https://course-final.vercel.app
+deploy mockapi flask ขึ้น render 
